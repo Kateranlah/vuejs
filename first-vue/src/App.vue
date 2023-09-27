@@ -10,9 +10,8 @@ import { RouterLink, RouterView } from 'vue-router'
     </div>
 
     <nav>
-      <RouterLink class="link" to="/">Home</RouterLink>
-      <RouterLink class="link" to="/Bestellen">About</RouterLink>
-      <RouterLink class="link" to="/Fahrer*in werden">About</RouterLink>
+      <RouterLink class="link" to="/Bestellen">Bestellen</RouterLink>
+      <RouterLink class="link" to="/Fahrer werden">Fahrer werden</RouterLink>
       <img src="assets/img/burger-menu" alt="menu">
     </nav>
 

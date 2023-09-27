@@ -19,9 +19,21 @@ header {
     margin-inline: 2rem;
     .link{
       text-decoration: none;
+      padding: 5px 15px;
+      transition: 0.15s ease-in;
+      border-radius: 30px;
 
-      &::after{
+      &:visited{
         color: black;
+      }
+
+      &:hover,
+      &:active{
+        background-color: $color-grey;
+        padding: 5px 15px;
+        border-radius: 30px;
+        
+
       }
     }
   }

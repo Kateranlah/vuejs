@@ -11,27 +11,31 @@
       <RouterLink class="link" to="/Fahrer werden"><img class="icon pr1" :src="(`../src/assets/img/bike.png`)" alt="bike">
         Fahrer werden</RouterLink>
       <div @click="toggleMenu" class="link f-row">
-        <BurgerMenu id="open-menu" v-if="menuIsVisible"/>
-
-
         <img class="icon" :src="(`../src/assets/img/burger-menu.png`)" alt="menu">
       </div>
     </nav>
-
   </header>
+  <main>
+    <BurgerMenu v-if="menuIsVisible" />
+  </main>
 
   <RouterView />
 </template>
 
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import BurgerMenu from './components/BurgerMenu.vue'
 import { ref } from "vue";
-    let menuIsVisible = ref(false);
 
-function toggleMenu(){
-  menuIsVisible.value = !menuIsVisible.value  
+export default {
+
+}
+
+let menuIsVisible = ref(false);
+
+function toggleMenu() {
+  menuIsVisible.value = !menuIsVisible.value
   console.log(menuIsVisible);
-  
 }
 
 

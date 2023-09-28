@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-</script>
-
 <template>
   <header class="shadow">
     <div class="f-row">
@@ -10,12 +6,36 @@ import { RouterLink, RouterView } from 'vue-router'
     </div>
 
     <nav>
-      <RouterLink class="link" to="/Bestellen">Bestellen</RouterLink>
-      <RouterLink class="link" to="/Fahrer werden">Fahrer werden</RouterLink>
-      <img src="assets/img/burger-menu" alt="menu">
+      <RouterLink class="link" to="/Bestellen"> <img class="icon pr1" :src="(`../src/assets/img/company.png`)"
+          alt="house"> Bestellen</RouterLink>
+      <RouterLink class="link" to="/Fahrer werden"><img class="icon pr1" :src="(`../src/assets/img/bike.png`)" alt="bike">
+        Fahrer werden</RouterLink>
+      <div @click="toggleMenu" class="link f-row">
+        <BurgerMenu id="open-menu" v-if="menuIsVisible"/>
+
+
+        <img class="icon" :src="(`../src/assets/img/burger-menu.png`)" alt="menu">
+      </div>
     </nav>
 
   </header>
 
   <RouterView />
 </template>
+
+<script setup lang="ts">
+import { RouterLink, RouterView } from 'vue-router'
+import { ref } from "vue";
+    let menuIsVisible = ref(false);
+
+function toggleMenu(){
+  menuIsVisible.value = !menuIsVisible.value  
+  console.log(menuIsVisible);
+  
+}
+
+
+
+</script>
+
+

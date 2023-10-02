@@ -1,22 +1,23 @@
 <template>
   <header class="shadow">
     <div class="f-row">
-      <RouterLink to="/"><img :src="(`../src/assets/img/logo-small.png`)" alt="logo"></RouterLink>
+      <router-link to="/"><img :src="(`../src/assets/img/logo-small.png`)" alt="logo"></router-link>
       <span><i>GREEN</i> FOOD</span>
     </div>
 
     <nav>
-      <RouterLink class="link" to="/Bestellen"> <img class="icon pr1" :src="(`../src/assets/img/company.png`)"
-          alt="house"> Bestellen</RouterLink>
-      <RouterLink class="link" to="/Fahrer werden"><img class="icon pr1" :src="(`../src/assets/img/bike.png`)" alt="bike">
-        Fahrer werden</RouterLink>
-      <div @click="toggleMenu" class="link f-row">
+      <router-link class="link" to="/Bestellen"> <img class="icon pr1" :src="(`../src/assets/img/company.png`)"
+          alt="house"> Bestellen</router-link>
+      <router-link class="link" to="/Fahrer werden"><img class="icon pr1" :src="(`../src/assets/img/bike.png`)" alt="bike">
+        Fahrer werden</router-link>
+      <div @click="menuIsVisible=true" class="link f-row">
         <img class="icon" :src="(`../src/assets/img/burger-menu.png`)" alt="menu">
       </div>
     </nav>
   </header>
   <main>
-    <BurgerMenu v-if="menuIsVisible" />
+    <BurgerMenu @closeMenu="close" v-if="menuIsVisible" />
+
   </main>
 
   <RouterView />
@@ -24,21 +25,14 @@
 
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import BurgerMenu from './components/BurgerMenu.vue'
 import { ref } from "vue";
-
-export default {
-
-}
+import  BurgerMenu from './components/BurgerMenu.vue';
 
 let menuIsVisible = ref(false);
-
-function toggleMenu() {
-  menuIsVisible.value = !menuIsVisible.value
-  console.log(menuIsVisible);
-}
-
-
+ 
+ const close = () => {
+     menuIsVisible.value = false
+ }
 
 </script>
 

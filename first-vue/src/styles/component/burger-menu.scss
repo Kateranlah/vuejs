@@ -20,27 +20,27 @@
   border-radius: 15px;
   transform: translatey(-5%);
 
-  ul{
+  ul {
     list-style: none;
     padding-left: 0;
 
-    li{
+    li {
       display: flex;
       align-items: center;
     }
   }
 
-  .link{
+  .link {
     transition: 0s;
     border-radius: 0px;
     margin-bottom: 10px;
-  
-    &:visited{
+
+    &:visited {
       color: black;
     }
-  
+
     &:hover,
-    &:active{
+    &:active {
       background-color: $color-grey;
       padding: 5px 15px;
       border-radius: 0px;
@@ -48,13 +48,12 @@
     }
 
     @at-root #{&}__last {
-      
-        // -webkit-box-shadow: 0 3px rgba(57, 63, 72, 0.3);
-        // -moz-box-shadow: 0 3px rgba(57, 63, 72, 0.3);
-        // box-shadow: 0 1px 0  rgba(57, 63, 72, 0.3);  
-        
-        border-bottom: 3px solid rgba(57, 63, 72, 0.3);
-        offset: 20px;
+      // -webkit-box-shadow: 0 3px rgba(57, 63, 72, 0.3);
+      // -moz-box-shadow: 0 3px rgba(57, 63, 72, 0.3);
+      // box-shadow: 0 1px 0  rgba(57, 63, 72, 0.3);
+
+      border-bottom: 3px solid rgba(57, 63, 72, 0.3);
+      offset: 20px;
     }
   }
 
@@ -68,21 +67,18 @@
     flex-direction: column;
     justify-content: space-between;
 
-    margin-top: 20px;  
+    margin-top: 20px;
   }
 
-  
   @at-root #{&}__button-container {
     display: flex;
     margin-top: 20px;
     justify-content: space-between;
     width: 100%;
-    
   }
 }
 
 @media (max-width: 1025px) {
-
   .card-container {
     background-color: white;
     height: 100vh;
@@ -90,11 +86,9 @@
     overflow: hidden;
   }
 
-	.card{
+  .card {
     width: 100%;
     border-radius: 0;
-    padding-top: 100px;
     overflow: hidden;
   }
 }
-

@@ -6,9 +6,10 @@
     </div>
 
     <nav>
-      <router-link class="link" to="/Bestellen"> <img class="icon pr1" :src="(`../src/assets/img/company.png`)"
-          alt="house"> Bestellen</router-link>
-      <router-link class="link" to="/Fahrer werden"><img class="icon pr1" :src="(`../src/assets/img/bike.png`)" alt="bike">
+      <router-link v-if="!fullMenu" class="link" to="/Bestellen"> <img class="icon pr1"
+          :src="(`../src/assets/img/company.png`)" alt="house"> Bestellen</router-link>
+      <router-link v-if="!fullMenu" class="link" to="/Fahrer werden"><img class="icon pr1"
+          :src="(`../src/assets/img/bike.png`)" alt="bike">
         Fahrer werden</router-link>
       <div @click="openMenu" class="link f-row">
         <img class="icon" :src="(`../src/assets/img/burger-menu.png`)" alt="menu">
@@ -16,52 +17,37 @@
     </nav>
   </header>
   <BurgerMenu @closeMenu="close" v-if="menuIsVisible" />
- 
-  <RouterView  v-if="showContent"/>
+
+  <RouterView />
 </template>
 
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import { ref } from "vue";
-import  BurgerMenu from './components/BurgerMenu.vue';
+import BurgerMenu from './components/BurgerMenu.vue';
 
 
 
 let menuIsVisible = ref(false);
 let fullMenu = ref()
-let showContent = ref(true);
- 
- const close = () => {
-     menuIsVisible.value = false;
-     showContent.value = true;
- }
 
-const openMenu = () =>{
-  menuIsVisible.value = true; 
+const close = () => {
+  menuIsVisible.value = false;
+  document.documentElement.style.overflow = 'auto'
+}
 
-  if (fullMenu.value) {
-    showContent.value = false;
-  }
-
-  if (!fullMenu) {
-    showContent.value = false;
-  }
-
-
-
- 
+const openMenu = () => {
+  menuIsVisible.value = true;
+  document.documentElement.style.overflow = 'hidden'
+  console.log(fullMenu.value);
 
 }
 
- function myFunction(x) {
-  if (x.matches) { 
-   fullMenu.value = true;
-   console.log('kl');
-   
+function myFunction(x) {
+  if (x.matches) {
+    fullMenu.value = true;
   } else {
     fullMenu.value = false;
-    console.log('g');
-    
   }
 }
 

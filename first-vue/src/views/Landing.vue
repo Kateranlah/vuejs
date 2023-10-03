@@ -1,5 +1,15 @@
 <template>
-<main style="background-color: green; height: 300vh; margin-top: 6%;">
+    <main>
+        <!-- <div >
+            <div></div>
 
-</main>
+            <img class="mainImg" :src="(`../assets/img/fruitplate.png`)">
+        </div> -->
+    </main>
 </template>
+
+<script setup lang="ts">
+import "../styles/views/landing.scss"
+
+
+</script>

@@ -44,7 +44,7 @@
                    
                         <router-link class="link" to="/">
                             <img class="icon pr1" :src="(`../src/assets/img/company.png`)">
-                            Lieferando for business</router-link>
+                            Green Food for business</router-link>
                 </ul>
             </div>
             <!-- //The top is Work in progress. Just Fillers without function -->

@@ -15,8 +15,9 @@
       </div>
     </nav>
   </header>
+  <BurgerMenu @closeMenu="close" v-if="menuIsVisible" />
   <main>
-    <BurgerMenu @closeMenu="close" v-if="menuIsVisible" />
+   
 
   </main>
 

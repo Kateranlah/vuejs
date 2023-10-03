@@ -1,3 +1,4 @@
+@import "../basic/var.scss";
 *,
 *::before,
 *::after {
@@ -41,4 +42,71 @@ body {
 
 .pr1{
   padding-right: 1rem;
+}
+
+.icon{
+  height: 1rem;
+  width: auto;
+}
+
+.link{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+  padding: 5px 15px;
+  transition: 0.15s ease-in;
+  border-radius: 30px;
+  
+
+  &:visited{
+    color: black;
+  }
+
+  &:hover,
+  &:active{
+    background-color: $color-grey;
+    padding: 5px 15px;
+    border-radius: 30px;
+  }
+}
+
+button{
+  cursor: pointer;
+  font-weight: 700px;
+  font-size: 1rem;
+
+  padding: 10px 20px;
+  border-radius: 30px;
+  width: 48%;
+  font-weight: bold;
+  border: none;
+  transition: 0.15s ease-in;
+
+  background-color: $color-grey;
+
+  &:hover{
+    background-color: #e7e7e7;
+  }
+
+}
+
+.button--green{
+    background: $color-green;
+    color: white;
+    text-shadow: 0px 0px 2px #000000;
+
+    &:hover{
+      background-color: $color-green;
+    }
+}
+
+.bold1r{
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.pointer{
+  cursor: pointer;
 }

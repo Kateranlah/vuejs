@@ -40,6 +40,12 @@ body {
   align-items: center;
 }
 
+.f-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .pr1{
   padding-right: 1rem;
 }

@@ -1,10 +1,16 @@
 <template>
     <main>
-        <!-- <div >
-            <div></div>
-
-            <img class="mainImg" :src="(`../assets/img/fruitplate.png`)">
-        </div> -->
+        <section class="first-section f-row m-f-row">
+            <div>
+                <h1>Bestelle Essen und mehr</h1>
+                <h2>Restaurants und Geschäfte, die zu dir liefern</h2>
+                <div><input type="text"></div>
+            </div>
+            <div class="f-column">
+                <img class="main-img" src="../assets/img/fruitplate.png" alt="" srcset="">
+                <span class="logo-text"><i>GREEN</i> FOOD</span>
+            </div>
+        </section>
     </main>
 </template>
 

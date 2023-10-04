@@ -41,6 +41,17 @@ const openMenu = () => {
   document.documentElement.style.overflow = 'hidden'
 }
 
+function myFunction(x) {
+  if (x.matches) {
+    fullMenu.value = true;
+  } else {
+    fullMenu.value = false;
+  }
+}
+let x = window.matchMedia("(max-width: 1025px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
+
 </script>
 
 

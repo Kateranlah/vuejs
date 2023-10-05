@@ -68,6 +68,15 @@ main {
 }
 
 @media (max-width: 1025px) {
+
+  h1{
+    font-size: 2rem;
+  }
+  
+  h2{
+    font-size: 1.5rem;
+  }
+
   main {
     background: rgb(231, 231, 231);
     background: -moz-linear-gradient(
@@ -88,6 +97,14 @@ main {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e7e7e7",endColorstr="#b8e45c",GradientType=1);
   }
 
+.first-section{
+    padding-left: 1rem;
+}
+
+  .logo-text {
+    font-size: 1.5rem;
+  }
+
   .m-f-row{
     flex-direction: column;
   }
@@ -95,6 +112,12 @@ main {
   .first-section {
    padding-top: 15%;
    padding-bottom: 3%;
+  }
+
+  .eyecatcher{
+    align-items: center;
+    height: 50%;
+    width: 100%;
   }
 }
 

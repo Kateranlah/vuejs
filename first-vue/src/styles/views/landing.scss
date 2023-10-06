@@ -66,6 +66,8 @@ main {
   }
 }
 
+// Small screens // laptops
+
 @media (max-width: 1025px) {
   h1 {
     font-size: 2rem;
@@ -110,6 +112,8 @@ main {
     }
   }
 }
+
+// Mobiles
 
 @media (max-width: 600px) {
   .eyecatcher {

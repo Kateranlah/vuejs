@@ -1,126 +1,130 @@
 @import "../basic/var.scss";
 
-h1{
+h1 {
   font-size: 3rem;
   font-weight: 700;
-  max-width: 90%;
+  width: 80%;
 }
 
-h2{
+h2 {
   font-size: 2rem;
   font-weight: 700;
-  max-width: 80%;
+  width: 80%;
 }
 
 main {
   height: 100vh;
   width: 100vw;
-
-  background: rgb(231, 231, 231);
-  background: -moz-linear-gradient(
-    104deg,
-    rgba(231, 231, 231, 0.7035407913165266) 30%,
-    rgba(184, 228, 92, 1) 50%
-  );
-  background: -webkit-linear-gradient(
-    104deg,
-    rgba(231, 231, 231, 0.7035407913165266) 50%,
-    rgba(184, 228, 92, 1) 50%
-  );
-  background: linear-gradient(
-    104deg,
-    rgba(231, 231, 231, 0.7035407913165266) 50%,
-    rgba(184, 228, 92, 1) 50%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e7e7e7",endColorstr="#b8e45c",GradientType=1);
 }
 
 .first-section {
   height: 100vh;
-  width: 95vw;
-  margin-inline: auto;
-
+  width: 100vw;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
-.logo-text {
-  font-size: 2rem;
-  font-weight: 700;
+.eyecatcher {
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 100%;
 
-  i {
-    color: $color-green;
-    text-shadow: 0px 0px 3px #000000;
-
-    color: white;
+  @at-root #{&}__left {
+    background-color: $color-grey;
   }
-}
-.main-img {
-  height: 70%;
-  margin-right: 10%;
-  width: auto;
-}
 
-.eyecatcher{
-  align-items: center;
-  height: 50%;
-  width: 50%;
+  @at-root #{&}__right {
+    background: $color-green;
+    background: -moz-linear-gradient(279deg, $color-green 80%, $color-grey 80%);
+    background: -webkit-linear-gradient(
+      279deg,
+      $color-green 80%,
+      $color-grey 80%
+    );
+    background: linear-gradient(279deg, $color-green 80%, $color-grey 80%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b8e45c",endColorstr="#e7e7e7",GradientType=1);
+
+    .main-img {
+      transform: translate(5%, 20%);
+      height: 40%;
+      width: auto;
+    }
+
+    .logo-text {
+      transform: translate(5%, 100%);
+      font-size: 2rem;
+      font-weight: 700;
+
+      i {
+        color: $color-green;
+        text-shadow: 0px 0px 3px #000000;
+
+        color: white;
+      }
+    }
+  }
 }
 
 @media (max-width: 1025px) {
-
-  h1{
+  h1 {
     font-size: 2rem;
   }
-  
-  h2{
+
+  h2 {
     font-size: 1.5rem;
   }
 
-  main {
-    background: rgb(231, 231, 231);
-    background: -moz-linear-gradient(
-      173deg,
-      rgba(231, 231, 231, 0.7035407913165266) 50%,
-      rgba(184, 228, 92, 1) 50%
-    );
-    background: -webkit-linear-gradient(
-      173deg,
-      rgba(231, 231, 231, 0.7035407913165266) 50%,
-      rgba(184, 228, 92, 1) 50%
-    );
-    background: linear-gradient(
-      173deg,
-      rgba(231, 231, 231, 0.7035407913165266) 50%,
-      rgba(184, 228, 92, 1) 50%
-    );
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e7e7e7",endColorstr="#b8e45c",GradientType=1);
+  .first-section {
+    height: 80vh;
   }
-
-.first-section{
-    padding-left: 1rem;
-}
 
   .logo-text {
     font-size: 1.5rem;
   }
 
-  .m-f-row{
+  .m-f-row {
     flex-direction: column;
   }
 
-  .first-section {
-   padding-top: 15%;
-   padding-bottom: 3%;
-  }
+  .eyecatcher {
+    @at-root #{&}__right {
+      height: 60%;
+      background: $color-green;
+      background: -moz-linear-gradient(
+        353deg,
+        $color-green 75%,
+        $color-grey 75%
+      );
+      background: -webkit-linear-gradient(
+        353deg,
+        $color-green 75%,
+        $color-grey 75%
+      );
+      background: linear-gradient(353deg, $color-green 75%, $color-grey 75%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b8e45c",endColorstr="#e7e7e7",GradientType=1);
+    }
 
-  .eyecatcher{
-    align-items: center;
-    height: 50%;
-    width: 100%;
+    @at-root #{&}__left {
+      padding-top: 10%;
+    }
   }
 }
 
+@media (max-width: 600px) {
+  .eyecatcher {
+    @at-root #{&}__left {
+      padding-top: 20%;
+    }
+  }
+}
 
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.5rem;
+  }
 
-
+  h2 {
+    font-size: 1rem;
+  }
+}

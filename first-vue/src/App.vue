@@ -41,7 +41,7 @@ const openMenu = () => {
   document.documentElement.style.overflow = 'hidden'
 }
 
-function myFunction(x) {
+function myFunction(x:any) {
   if (x.matches) {
     fullMenu.value = true;
   } else {

@@ -6,9 +6,6 @@
                 <h2>Restaurants und Geschäfte, die zu dir liefern</h2>
                 <div class="search-container">
                     <div class="__input-container">
-                        <span class="location-icon-container">
-                            <img class="icon" src="../assets/img/location.png">
-                        </span>
                         <label for="">
                             <input type="text" placeholder="Adresse, z.B. Musterstr. 1"></label>
                         <span>
@@ -17,8 +14,8 @@
                     </div>
                     <span>
                         <div class="search-icon-container">
-                            <img class="icon" src="../assets/img/magnifying-glass.png">
-                            <!-- <span> Suche </span> -->
+                            <!-- <img class="icon" src="../assets/img/magnifying-glass.png"> -->
+                            <span>Suchen </span>
                         </div>
                     </span>
                 </div>

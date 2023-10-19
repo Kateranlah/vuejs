@@ -6,9 +6,9 @@
     </div>
 
     <nav>
-      <router-link v-if="!fullMenu" class="link" to="/Bestellen"> <img class="icon pr1"
+      <router-link v-if="!desktopView" class="link" to="/Bestellen"> <img class="icon pr1"
           :src="(`../src/assets/img/company.png`)" alt="house"> Bestellen</router-link>
-      <router-link v-if="!fullMenu" class="link" to="/Fahrer werden"><img class="icon pr1"
+      <router-link v-if="!desktopView" class="link" to="/Fahrer werden"><img class="icon pr1"
           :src="(`../src/assets/img/bike.png`)" alt="bike">
         Fahrer werden</router-link>
       <div @click="openMenu" class="link f-row">
@@ -18,18 +18,21 @@
   </header>
   <BurgerMenu @closeMenu="close" v-if="menuIsVisible" />
 
-  <RouterView />
+  <RouterView :desktopView="desktopView" />
+  <LandingPage :desktopView="desktopView" />
 </template>
 
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import { ref } from "vue";
 import BurgerMenu from './components/BurgerMenu.vue';
+import LandingPage from './views/Landing.vue';
+
 
 
 
 let menuIsVisible = ref(false);
-let fullMenu = ref()
+let desktopView = ref()
 
 const close = () => {
   menuIsVisible.value = false;
@@ -43,14 +46,15 @@ const openMenu = () => {
 
 function myFunction(x:any) {
   if (x.matches) {
-    fullMenu.value = true;
+    desktopView.value = true;
   } else {
-    fullMenu.value = false;
+    desktopView.value = false;
   }
 }
 let x = window.matchMedia("(max-width: 1025px)")
 myFunction(x) // Call listener function at run time
 x.addListener(myFunction) // Attach listener function on state changes
+
 
 </script>
 

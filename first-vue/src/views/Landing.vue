@@ -33,13 +33,13 @@
             </div>
 
             <div class="f-row --max-w-1024">
-                <div class="card-simple">
+                <div v-if="desktopView" class="card-simple">
                     <div><img src="../assets/img/location.png"></div>
                     <h5>Teile uns deinen Standort mit</h5>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem amet, totam magni ex at ri totam
                     </p>
                 </div>
-                <div class="card-simple">
+                <div v-if="desktopView" class="card-simple">
                     <div><img src="../assets/img/apple.png"></div>
                     <h5>Suche, worauf du Lust hast</h5>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem amet, totam magni ex at ri totam
@@ -58,6 +58,12 @@
 
 <script setup lang="ts">
 import "../styles/views/landing.scss"
+import { desktop }  from "../App.vue";
 
+props: {
+  desktopView: Boolean
+}
+
+console.log(desktopView);
 
 </script>

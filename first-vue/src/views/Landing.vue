@@ -28,25 +28,25 @@
         </section>
         <section class="f-column">
             <div class="f-column mt3">
-                <h3>So bestellst Du</h3>
+                <h3 class="normal">So bestellst Du</h3>
                 <h2>Es ist ganz einfach.</h2>
             </div>
 
             <div class="f-row --max-w-1024">
                 <div class="card-simple">
-                    <img src="">
+                    <div><img src="../assets/img/location.png"></div>
                     <h5>Teile uns deinen Standort mit</h5>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem amet, totam magni ex at ri totam
                     </p>
                 </div>
                 <div class="card-simple">
-                    <img src="">
+                    <div><img src="../assets/img/apple.png"></div>
                     <h5>Suche, worauf du Lust hast</h5>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem amet, totam magni ex at ri totam
                     </p>
                 </div>
-                <div class="card-simple"> 
-                    <img src="">
+                <div class="card-simple">
+                    <div><img src="../assets/img/bike.png"></div>
                     <h5>Bestelle zur Lieferung oder Abholung</h5>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem amet, totam magni ex at ri totam
                     </p>

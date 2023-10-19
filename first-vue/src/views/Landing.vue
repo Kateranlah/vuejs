@@ -26,34 +26,33 @@
                 <span class="logo-text"><i>GREEN</i> FOOD</span>
             </div>
         </section>
-        <!-- <section>
-            <div>
+        <section class="f-column">
+            <div class="f-column mt3">
                 <h3>So bestellst Du</h3>
-                <h2>Es ist ganz einfach</h2>
+                <h2>Es ist ganz einfach.</h2>
             </div>
 
-
-            <div>
-                <div>
+            <div class="f-row --max-w-1024">
+                <div class="card-simple">
                     <img src="">
                     <h5>Teile uns deinen Standort mit</h5>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem amet, totam magni ex at ri totam
                     </p>
                 </div>
-                <div>
+                <div class="card-simple">
                     <img src="">
                     <h5>Suche, worauf du Lust hast</h5>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem amet, totam magni ex at ri totam
                     </p>
                 </div>
-                <div>
+                <div class="card-simple"> 
                     <img src="">
                     <h5>Bestelle zur Lieferung oder Abholung</h5>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem amet, totam magni ex at ri totam
                     </p>
                 </div>
             </div>
-        </section> -->
+        </section>
     </main>
 </template>
 

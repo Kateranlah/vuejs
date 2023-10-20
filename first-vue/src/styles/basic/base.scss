@@ -21,6 +21,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.bg-g{
+  background-color: $color-green; 
+}
+
 .f-row {
   display: flex;
   flex-direction: row;

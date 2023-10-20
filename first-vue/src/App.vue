@@ -6,9 +6,9 @@
     </div>
 
     <nav>
-      <router-link v-if="!desktopView" class="link" to="/Bestellen"> <img class="icon pr1"
+      <router-link v-if="desktopView" class="link" to="/Bestellen"> <img class="icon pr1"
           :src="(`../src/assets/img/company.png`)" alt="house"> Bestellen</router-link>
-      <router-link v-if="!desktopView" class="link" to="/Fahrer werden"><img class="icon pr1"
+      <router-link v-if="desktopView" class="link" to="/Fahrer werden"><img class="icon pr1"
           :src="(`../src/assets/img/bike.png`)" alt="bike">
         Fahrer werden</router-link>
       <div @click="openMenu" class="link f-row">
@@ -18,8 +18,8 @@
   </header>
   <BurgerMenu @closeMenu="close" v-if="menuIsVisible" />
 
-  <RouterView :desktopView="desktopView" />
-  <LandingPage :desktopView="desktopView" />
+  <RouterView/>
+
 </template>
 
 <script setup lang="ts">
@@ -46,9 +46,9 @@ const openMenu = () => {
 
 function myFunction(x:any) {
   if (x.matches) {
-    desktopView.value = true;
-  } else {
     desktopView.value = false;
+  } else {
+    desktopView.value = true;
   }
 }
 let x = window.matchMedia("(max-width: 1025px)")

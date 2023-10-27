@@ -57,7 +57,7 @@
                 </div>
             </div>
 
-            <span id="dot-container">
+            <span v-if="!desktopView" id="dot-container">
                 <div @click="choosen = 2; slide();" class="dot" :class="{ bgg: choosen == 0 }"></div>
                 <div @click="choosen = 0; slide();" class="dot" :class="{ bgg: choosen == 1 }"></div>
                 <div @click="choosen = 1; slide();" class="dot" :class="{ bgg: choosen == 2 }"></div>

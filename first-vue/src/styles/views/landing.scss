@@ -258,7 +258,6 @@ span:has(.dot) {
   }
 
   .card-simple {
-    border: solid 1px;
     justify-content: center;
     flex-shrink: 0;
     width: 100%;
@@ -267,19 +266,15 @@ span:has(.dot) {
     transform: scale(1);
     scroll-snap-align: center;
 
-    white-space: nowrap
-
-    p{
+    white-space: nowrap p {
       text-align: center;
     }
-
   }
 
   #slider-container {
     display: flex;
     align-items: center;
     justify-content: center;
-   
   }
 
   .slider {
@@ -291,15 +286,13 @@ span:has(.dot) {
     scroll-snap-type: x mandatory;
     overflow-x: auto; /* Enable horizontal scrolling */
     overflow-y: hidden; /* Hide vertical scrollbar */
-     
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
     &::-webkit-scrollbar {
-      display: none;}
+      display: none;
+    }
   }
-
-
-  
 }
 
 // Mobiles

@@ -32,7 +32,7 @@
                 <h2>Es ist ganz einfach.</h2>
             </div>
             <div id="slider-container">
-                <div ref="test" class="f-row --max-w-1024 slider">
+                <div ref="slider" class="f-row --max-w-1024 slider">
                     <div class="card-simple">
                         <div><img src="../assets/img/location.png"></div>
                         <h5>Teile uns deinen Standort mit</h5>
@@ -58,9 +58,9 @@
             </div>
 
             <span id="dot-container">
-                <div @click="choosen = 0" class="dot" :class="{ bgg: choosen == 0 }"></div>
-                <div @click="choosen = 1" class="dot" :class="{ bgg: choosen == 1 }"></div>
-                <div @click="choosen = 2" class="dot" :class="{ bgg: choosen == 2 }"></div>
+                <div @click="choosen = 2; slide();" class="dot" :class="{ bgg: choosen == 0 }"></div>
+                <div @click="choosen = 0; slide();" class="dot" :class="{ bgg: choosen == 1 }"></div>
+                <div @click="choosen = 1; slide();" class="dot" :class="{ bgg: choosen == 2 }"></div>
             </span>
         </section>
     </main>
@@ -71,47 +71,47 @@ import "../styles/views/landing.scss"
 import { ref, onMounted } from "vue";
 
 let choosen = ref(0)
-let test = ref()
-let test1: any
+let slider = ref()
+let scrollContainer: any
 
 onMounted(() => {
-    setInterval(continueSlider, 1000),
-        test1 = test.value
-    console.log(test);
-
+    setInterval(slide, 20000),
+        scrollContainer = slider.value
+    scrollContainer.addEventListener("scroll", () => {
+        checkDot();
+    });
 })
 
-
-
-
-const continueSlider = () => {
-  
- 
-    if (choosen.value == 0) {
-        choosen.value++
-        test1.scroll({
-            left: 380,
-            behavior: "smooth",
-        });
-        console.log(0 + 'dot 2');
-    }else if (choosen.value == 1){
-        choosen.value++
-        test1.scroll({
-            left: 2000,
-            behavior: "smooth",
-        });
-        console.log(1 + 'dot 3');
-    }
-     else {
+const checkDot = () => {
+    if (scrollContainer.scrollLeft == 0) {
         choosen.value = 0
-        test1.scroll({
-            left: 0,
+    } else if (scrollContainer.scrollLeft < window.innerWidth && scrollContainer.scrollLeft > 0) {
+        choosen.value = 1
+
+    } else {
+        choosen.value = 2
+    }
+}
+const slide = () => {
+    if (choosen.value == 0) {
+        checkDot();
+        scrollContainer.scroll({
+            left: window.innerWidth / 2,
             behavior: "smooth",
         });
-        console.log(2 + 'dot 1');
+    } else if (choosen.value == 1) {
+        checkDot();
+        scrollContainer.scroll({
+            left: window.innerWidth * 2,
+            behavior: "smooth",
+        });
     }
-
-
+    else {
+        checkDot();
+        scrollContainer.scroll({
+            left: 0
+        });
+    }
 }
 
 // repetetive code. reduce it 

@@ -31,8 +31,8 @@
                 <h3 class="normal">So bestellst Du</h3>
                 <h2>Es ist ganz einfach.</h2>
             </div>
-            <div id="slider-container">
-                <div ref="slider" class="f-row --max-w-1024 slider">
+            <div id="slider-container" :class="{ mb3: desktopView }">
+                <div ref="slider" class="f-row --max-w-standart slider">
                     <div class="card-simple">
                         <div><img src="../assets/img/location.png"></div>
                         <h5>Teile uns deinen Standort mit</h5>
@@ -62,6 +62,25 @@
                 <div @click="choosen = 0; slide();" class="dot" :class="{ bgg: choosen == 1 }"></div>
                 <div @click="choosen = 1; slide();" class="dot" :class="{ bgg: choosen == 2 }"></div>
             </span>
+        </section>
+        <section class="bg-p f-column">
+            <div class="--max-w-standart jc-sb f-row ">
+            <div class="mt3">
+                <h3>App herunterladen</h3>
+                <p>einfach und bequem Bestellen!</p>
+                <div class="button-container">
+                    <button>Eins</button>
+                    <button>Zwei</button>
+                    <button>Drei</button>
+                </div>
+
+
+
+            </div>
+            <div class="phone">
+                <img src="/src/assets/img/iphone.png">
+            </div>
+        </div>
         </section>
     </main>
 </template>

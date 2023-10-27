@@ -26,6 +26,10 @@ body {
   background-color: $color-green; 
 }
 
+.bg-p{
+  background-color: $color-purple;
+}
+
 .f-row {
   display: flex;
   flex-direction: row;
@@ -38,6 +42,11 @@ body {
   align-items: center;
 }
 
+.jc-sb{
+  justify-content: space-between;
+  width: 100%;
+}
+
 .pr1 {
   padding-right: 1rem;
 }
@@ -46,11 +55,15 @@ body {
   margin-top: 3rem;
 }
 
+.mb3 {
+  margin-bottom: 3rem;
+}
+
 .normal{
   font-weight: normal;
 }
-.--max-w-1024 {
-  max-width: 1024px;
+.--max-w-standart {
+  max-width: 800px;
 }
 
 .icon {

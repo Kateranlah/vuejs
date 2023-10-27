@@ -15,6 +15,11 @@ h2 {
   color: $color-green;
 }
 
+h3{
+  font-size: 2rem;
+  font-weight: 700;
+}
+
 main {
   width: 100vw;
 }
@@ -159,9 +164,9 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 20rem;
+  // width: 20rem;
   height: 15rem;
-  padding: 10px 20px;
+  // padding: 10px 20px;
 
   h5 {
     font-size: 1rem;
@@ -210,6 +215,22 @@ span:has(.dot) {
   flex-direction: row;
   gap: 0.4rem;
 }
+
+.button-container{
+  display: flex;
+  width: 100%;
+  }
+
+  .phone{
+    display: flex;
+    
+    
+    img{
+    
+      height: 20rem;
+
+    }
+  }
 
 // Small screens // laptops
 

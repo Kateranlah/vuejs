@@ -33,21 +33,21 @@
             </div>
             <div id="slider-container">
                 <div ref="test" class="f-row --max-w-1024 slider">
-                    <div v-if="desktopView || choosen == 0" class="card-simple">
+                    <div class="card-simple">
                         <div><img src="../assets/img/location.png"></div>
                         <h5>Teile uns deinen Standort mit</h5>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem amet, totam magni ex at ri
                             totam
                         </p>
                     </div>
-                    <div v-if="desktopView || choosen == 0" class="card-simple">
+                    <div class="card-simple">
                         <div><img src="../assets/img/apple.png"></div>
                         <h5>Suche, worauf du Lust hast</h5>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem amet, totam magni ex at ri
                             totam
                         </p>
                     </div>
-                    <div v-if="desktopView || choosen == 0" class="card-simple">
+                    <div class="card-simple">
                         <div><img src="../assets/img/bike.png"></div>
                         <h5>Bestelle zur Lieferung oder Abholung</h5>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem amet, totam magni ex at ri
@@ -58,9 +58,9 @@
             </div>
 
             <span id="dot-container">
-                <div @click="choosen = 0" class="dot bg-g"></div>
-                <div @click="choosen = 1" class="dot"></div>
-                <div @click="choosen = 2" class="dot"></div>
+                <div @click="choosen = 0" class="dot" :class="{ bgg: choosen == 0 }"></div>
+                <div @click="choosen = 1" class="dot" :class="{ bgg: choosen == 1 }"></div>
+                <div @click="choosen = 2" class="dot" :class="{ bgg: choosen == 2 }"></div>
             </span>
         </section>
     </main>
@@ -68,12 +68,55 @@
 
 <script setup lang="ts">
 import "../styles/views/landing.scss"
+import { ref, onMounted } from "vue";
 
 let choosen = ref(0)
+let test = ref()
+let test1: any
 
+onMounted(() => {
+    setInterval(continueSlider, 1000),
+        test1 = test.value
+    console.log(test);
+
+})
+
+
+
+
+const continueSlider = () => {
+  
+ 
+    if (choosen.value == 0) {
+        choosen.value++
+        test1.scroll({
+            left: 380,
+            behavior: "smooth",
+        });
+        console.log(0 + 'dot 2');
+    }else if (choosen.value == 1){
+        choosen.value++
+        test1.scroll({
+            left: 2000,
+            behavior: "smooth",
+        });
+        console.log(1 + 'dot 3');
+    }
+     else {
+        choosen.value = 0
+        test1.scroll({
+            left: 0,
+            behavior: "smooth",
+        });
+        console.log(2 + 'dot 1');
+    }
+
+
+}
 
 // repetetive code. reduce it 
-import { ref } from "vue";
+
+
 let desktopView = ref()
 
 function myFunction(x: any) {

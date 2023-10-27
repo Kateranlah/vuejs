@@ -258,6 +258,7 @@ span:has(.dot) {
   }
 
   .card-simple {
+    border: solid 1px;
     justify-content: center;
     flex-shrink: 0;
     width: 100%;
@@ -267,6 +268,10 @@ span:has(.dot) {
     scroll-snap-align: center;
 
     white-space: nowrap
+
+    p{
+      text-align: center;
+    }
 
   }
 
@@ -281,7 +286,7 @@ span:has(.dot) {
     text-align: center;
     position: relative;
 
-    width: 70%;
+    width: 80%;
 
     scroll-snap-type: x mandatory;
     overflow-x: auto; /* Enable horizontal scrolling */

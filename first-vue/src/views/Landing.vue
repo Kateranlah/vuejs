@@ -64,23 +64,26 @@
             </span>
         </section>
         <section class="bg-p f-column">
-            <div class="--max-w-standart jc-sb f-row ">
-            <div class="mt3">
-                <h3>App herunterladen</h3>
-                <p>einfach und bequem Bestellen!</p>
-                <div class="button-container">
-                    <button>Eins</button>
-                    <button>Zwei</button>
-                    <button>Drei</button>
+            <div class="--max-w-standart f-row" :class="{ 'jc-sb': desktopView }">
+                <div class="mt3" :class="{ 'ml2': desktopView }" >
+                    <h3>App herunterladen</h3>
+                    <p>einfach und bequem Bestellen!</p>
+
+                    <div class="f-row">
+                        <div class="button-container">
+                            <button @click="demoWarning('download')">Appstore</button>
+                            <button @click="demoWarning('download')">Webstore</button>
+                            <button @click="demoWarning('download')">Newstore</button>
+                        </div>
+                        <div v-if="!desktopView" class="phone">
+                            <img src="/src/assets/img/iphone.png">
+                        </div>
+                    </div>
                 </div>
-
-
-
+                <div v-if="desktopView" class="phone">
+                    <img src="/src/assets/img/iphone.png">
+                </div>
             </div>
-            <div class="phone">
-                <img src="/src/assets/img/iphone.png">
-            </div>
-        </div>
         </section>
     </main>
 </template>
@@ -132,6 +135,15 @@ const slide = () => {
         });
     }
 }
+
+const demoWarning = (location: string) => {
+    if (location == "download") {
+        alert('Downloads stehen nicht zur verfügung. Diese Website ist ein Dummy')
+    }
+
+}
+
+
 
 // repetetive code. reduce it 
 

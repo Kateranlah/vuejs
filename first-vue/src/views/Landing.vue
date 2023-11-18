@@ -65,7 +65,7 @@
         </section>
         <section class="bg-p f-column">
             <div class="--max-w-standart f-row" :class="{ 'jc-sb': desktopView }">
-                <div class="mt3" :class="{ 'ml2': desktopView }" >
+                <div class="mt3" :class="{ 'ml2': desktopView }">
                     <h3>App herunterladen</h3>
                     <p>einfach und bequem Bestellen!</p>
 
@@ -84,6 +84,37 @@
                     <img src="/src/assets/img/iphone.png">
                 </div>
             </div>
+        </section>
+        <section class="bg-gy f-column pt3">
+            <div>
+                <span>GreenFood</span>
+                <h3>Deine Zeit</h3>
+            </div>
+            <div class="slider-container --max-w-standart">
+                <div class="slider f-row --max-w-standart">
+                <div class="card-simple">
+                        <div><img src="../assets/img/bike.png"></div>
+                        <h5>Treueprogramm</h5>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem amet, totam magni ex at ri
+                            totam
+                        </p>
+                    </div>
+                    <div class="card-simple">
+                        <div><img src="../assets/img/bike.png"></div>
+                        <h5>Unsere Garantie</h5>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem amet, totam magni ex at ri
+                            totam
+                        </p>
+                    </div>
+                    <div class="card-simple">
+                        <div><img src="../assets/img/bike.png"></div>
+                        <h5>Deine Vorteile</h5>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem amet, totam magni ex at ri
+                            totam
+                        </p>
+                    </div>
+            </div>
+        </div>
         </section>
     </main>
 </template>
